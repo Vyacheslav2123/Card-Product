@@ -9,6 +9,7 @@ body {
 .carusel-v2 {   
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .carusel-v2 .images-list {
     display: flex;
@@ -143,6 +144,7 @@ body {
         max-width: 215px;
         overflow-y: hidden;
         overflow-x: auto;
+        height: 60px;
     }
     .active {
        border-left: none;
@@ -169,6 +171,40 @@ body {
         top: 30px;
         left: 3%;
         transform: rotate(90deg);
+    }
+    .carusel-v2 nav {
+        display: -webkit-box;
+        justify-content: center;
+    }
+    .carusel-v2-nav_link {
+        width: 50px;
+        height: 30px;
+        margin-right: 10px;
+        border: solid 2px #ccc;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .carusel-v2-nav_link:first-child {
+        width: 80px;
+        height: 30px;
+        margin-right: 10px;
+        border: solid 2px #ccc;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .carusel-v2-nav_img {
+        width: 20px;
+        height: 20px;
+    }
+    .carusel-v2-nav_link-text {
+        color: #000;
+        position: absolute;
+        bottom: -25px;
     }
 }
 @media screen and (max-width: 405px) {

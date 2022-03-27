@@ -196,6 +196,7 @@ body {
         align-items: center;
         justify-content: center;
         position: relative;
+        text-decoration: none;
     }
     .carusel-v2-nav_img {
         width: 20px;
@@ -203,8 +204,9 @@ body {
     }
     .carusel-v2-nav_link-text {
         color: #000;
-        position: absolute;
-        bottom: -25px;
+       font-size: 7px;
+       margin-left: 3px;
+       text-decoration: none;
     }
 }
 @media screen and (max-width: 405px) {

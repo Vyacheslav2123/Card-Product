@@ -27,9 +27,6 @@ body {
     border-radius: 20px;
     border: none;
     box-shadow: 0 2px 6px rgb(0 0 0 / 15%);
-    position: absolute;
-    left: calc(50% - 15px);
-    top: 0;
 }
 .images-list__arrow {
     display: inline-block;
@@ -45,13 +42,11 @@ body {
 .images-list__arrow:hover {
     background-color: #90c511;
 }
-.images-list__arrow:first-child {
-    position: absolute;
-    top: 5px;
+.images-list__arrow:first-child{
+    margin-bottom: 15px;
 }
-.images-list__arrow:last-child {
-    position: absolute;
-    top: 80%;
+.images-list__arrow:last-child{
+    margin-top: 15px;
 }
 .images-list__arrow:first-child:after {
     content: '';

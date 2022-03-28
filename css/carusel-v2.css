@@ -14,7 +14,7 @@ body {
 .carusel-v2 .images-list {
     display: flex;
     flex-direction: column;
-    padding: 20px 20px;
+    padding: 20px 0;
     position:relative;
 }
 .images-list__arrow {
@@ -85,7 +85,6 @@ body {
 .carusel-v2 .images-list-container {
     display: flex;
     flex-direction: column;
-    margin: 0 30px;
     height: 350px;
     max-height: 407px;
     overflow-y: auto;
@@ -195,7 +194,6 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
         text-decoration: none;
     }
     .carusel-v2-nav_img {
@@ -205,8 +203,7 @@ body {
     .carusel-v2-nav_link-text {
         color: #000;
        font-size: 7px;
-       margin-left: 3px;
-       position: absolute;
+       margin-left: 10px;
        text-decoration: none;
     }
 }

@@ -157,13 +157,11 @@ body {
         width: 57px;
     }
     .images-list__arrow:first-child {
-        top: 30px;
-        left: 90%;
+        margin-bottom: 0;
         transform: rotate(90deg);
     }
     .images-list__arrow:last-child {
-        top: 30px;
-        left: 3%;
+        margin-top: 0;
         transform: rotate(90deg);
     }
     .carusel-v2 nav {

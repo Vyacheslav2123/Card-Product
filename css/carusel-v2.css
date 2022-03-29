@@ -24,15 +24,8 @@
     border-radius: 20px;
     border: none;
     box-shadow: 0 2px 6px rgb(0 0 0 / 15%);
-}
-.images-list__arrow {
     display: inline-block;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.images-list__arrow {
     cursor: pointer;
     transition: .3s ease;
 }

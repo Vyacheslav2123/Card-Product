@@ -53,6 +53,11 @@ function changePopupImg(m){
     currentPosition = currentPosition < 0 ? 0 : currentPosition;
     popupImg.src = getChild(Array.prototype.slice.call(imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[currentPosition]).src;
     glImg.src = popupImg.src;
+    images.forEach((item) => {
+        item.classList.remove("active");
+    });
+    Array.prototype.slice.call(imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[currentPosition]?.classList?.add("active");
+    Array.prototype.slice.call(imgContainer.childNodes).filter(e => !(e instanceof Text))[currentPosition]?.classList?.add("active");
 }
 
 
@@ -85,10 +90,10 @@ function getOneWidth(){
 }
 
 function SkipliOnResize(e){
-	if(window.innerWidth < (maxCurrentPosition + 1) * getOneWidth()) {
-		for(let el of document.querySelectorAll(".carusel-second > .images-list__arrow")){
-		    el.style.display = "flex";
-		}
+	let c_display = "none";
+	if(window.innerWidth < (maxCurrentPosition + 1) * getOneWidth()) c_display = "flex";
+	for(let el of document.querySelectorAll(".carusel-second > .images-list__arrow")){
+	    el.style.display = c_display;
 	}
 }
 

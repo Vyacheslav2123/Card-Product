@@ -29,10 +29,6 @@ let ProductDetailPageBySkipli = function (event) {
             top,
             behavior: 'smooth'
         });
-        imgContainerPopup.scrollBy({
-            top,
-            behavior: 'smooth'
-        });
         let left = -70;
         if (event.target.classList.contains("images-list__arrow-bottom")) left = -70;
         else if (event.target.classList.contains("images-list__arrow-top")) left = 70;

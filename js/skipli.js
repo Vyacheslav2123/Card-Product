@@ -66,8 +66,8 @@ function getChild(el, n = 0){
 }
 
 function togglePopup(open = true){
-    SkipliOnResize();
     if(open) {
+	setTimeout(SkipliOnResize, 100);
         popup.classList.add("carusel-v2-popup-view");
         document.body.style.position = "fixed";
     }

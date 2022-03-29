@@ -33,7 +33,10 @@ let ProductDetailPageBySkipli = function (event) {
         if (event.target.classList.contains("images-list__arrow-bottom")) left = -70;
         else if (event.target.classList.contains("images-list__arrow-top")) left = 70;
         imgContainer.scrollLeft += left;
-        imgContainerPopup.scrollLeft += left;
+        imgContainerPopup.scrollBy({
+            left,
+            bahivor: 'smooth'
+        });
     }
 };
 

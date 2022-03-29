@@ -58,6 +58,7 @@ function changePopupImg(m){
     });
     Array.prototype.slice.call(imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[currentPosition]?.classList?.add("active");
     Array.prototype.slice.call(imgContainer.childNodes).filter(e => !(e instanceof Text))[currentPosition]?.classList?.add("active");
+    document.querySelector(".carusel-v2-popup-index").innerText = (currentPosition + 1) + " из " + (maxCurrentPosition + 1);
 }
 
 

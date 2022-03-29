@@ -81,3 +81,20 @@ document.querySelector(".carusel-v2-exit").addEventListener("click", () => toggl
 document.addEventListener("mouseover", ProductDetailPageBySkipli);
 document.addEventListener("click", ProductDetailPageBySkipli);
 
+
+//MOBILE
+let x = {};
+let needToSwipe = 50;
+popup.addEventListener("touchstart", e => {
+	if (e.changedTouches && e.changedTouches[0]) {
+		let cur = e.changedTouches[0];
+		x[cur.identifier] = cur.pageX;
+	}
+})
+popup.addEventListener("touchend", e => {
+    if (e.changedTouches && e.changedTouches[0]) {
+		let cur = e.changedTouches[0];
+		if (cur.pageX <= (x[cur.identifier] - needToSwipe)) changePopupImg(1);
+        else if (cur.pageX >= (x[cur.identifier] + needToSwipe)) changePopupImg(-1);
+    }
+});

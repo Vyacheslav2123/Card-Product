@@ -118,6 +118,9 @@
     display: none;
 }
 @media screen and (max-width: 560px) {
+    .main-carusel{
+       display: none;
+    }
     .carusel-v2 {
         flex-direction: column-reverse;
         margin: 10px 10px;

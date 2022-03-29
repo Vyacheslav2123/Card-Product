@@ -256,15 +256,15 @@
     height: 20px;
     transform: rotate(-45deg);
     color: #000;
-    cursour: pointer;
+    cursor: pointer;
 }
 .carusel-v2-arrow-left{
-    margin-left: 20px;
+    margin-left: 30px;
     border-top: 4px solid;
     border-left: 4px solid;
 }
 .carusel-v2-arrow-right{
-    margin-right: 20px;
+    margin-right: 30px;
     border-bottom: 4px solid;
     border-right: 4px solid;
 }

@@ -6,9 +6,12 @@ const arrow = document.querySelector(".images-list__arrow");
 const popup = document.querySelector(".carusel-v2-popup");
 const popupImg = document.querySelector(".carusel-v2-popup > .carusel-v2-popup-img");
 
+let currentPosition = 0;
+
 let ProductDetailPageBySkipli = function (event) {
     if (event.type == "mouseover") {
         if (event.target.classList.contains("images-list-img")) {
+            currentPosition = getIndex(event.target);
             glImg.src = event.target.src;
             popupImg.src = event.target.src;
             images.forEach((item) => {
@@ -19,6 +22,7 @@ let ProductDetailPageBySkipli = function (event) {
     }
     if (event.type == "click") {
         if(event.target.classList.contains("images-list-img") || event.target.classList.contains("carusel-v2__important-img")){
+            currentPosition = getIndex(event.target);
             togglePopup(true);
             popupImg.src = event.target.src;
         }
@@ -50,6 +54,14 @@ function togglePopup(open = true){
         document.body.style.position = "relative";
     }
 }
+
+function getIndex(el){
+    let whoSearch = el.parentNode;
+    let whereSearch = whoSearch.parentNode.childNodes;
+    whereSearch = Array.prototype.slice.call(whereSearch).filter(e => !(e instanceof Text));
+    return whereSearch.indexOf(whoSearch)
+}
+
 document.querySelector(".carusel-v2-exit").addEventListener("click", () => togglePopup(false));
 document.addEventListener("mouseover", ProductDetailPageBySkipli);
 document.addEventListener("click", ProductDetailPageBySkipli);

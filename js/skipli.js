@@ -40,10 +40,6 @@ let ProductDetailPageBySkipli = function (event) {
         if (event.target.classList.contains("images-list__arrow-bottom")) left = -1;
         else if (event.target.classList.contains("images-list__arrow-top")) left = 1;
         imgContainer.scrollLeft += left * 70;
-        imgContainerPopup.scrollBy({
-            left: left * getOneWidth(),
-            behavior: 'smooth'
-        });
     }
 };
 
@@ -58,7 +54,7 @@ function changePopupImg(m){
     Array.prototype.slice.call(imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[currentPosition]?.classList?.add("active");
     Array.prototype.slice.call(imgContainer.childNodes).filter(e => !(e instanceof Text))[currentPosition]?.classList?.add("active");
     document.querySelector(".carusel-v2-popup-index").innerText = (currentPosition + 1) + " из " + (maxCurrentPosition + 1);
-    document.querySelector(".images-list-container").scroll({
+    imgContainerPopup.scroll({
         left: (currentPosition * getOneWidth()) - (window.innerWidth / 2) + (getOneWidth() / 2),
 	behavior: "smooth"
     })

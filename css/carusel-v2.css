@@ -281,7 +281,7 @@
 }
 .carusel-second > .images-list-container{
     flex-direction: row;
-    max-width: 45px;
+    max-width: 45%;
     height: auto;
 }
 .carusel-second > .images-list-container > .images-list-img-container{

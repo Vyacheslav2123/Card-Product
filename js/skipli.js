@@ -1,5 +1,6 @@
 const glImg = document.querySelector(".carusel-v2__important-img");
 const imgContainer = document.querySelectorAll(".images-list-container")[1];
+const imgContainerPopup = document.querySelectorAll(".images-list-container")[0];
 const images = document.querySelectorAll(".images-list-img-container");
 const arrow = document.querySelector(".images-list__arrow");
 const popup = document.querySelector(".carusel-v2-popup");
@@ -27,11 +28,16 @@ let ProductDetailPageBySkipli = function (event) {
         imgContainer.scrollBy({
             top,
             behavior: 'smooth'
-        })
+        });
+        imgContainerPopup.scrollBy({
+            top,
+            behavior: 'smooth'
+        });
         let left = -70;
         if (event.target.classList.contains("images-list__arrow-bottom")) left = -70;
         else if (event.target.classList.contains("images-list__arrow-top")) left = 70;
         imgContainer.scrollLeft += left;
+        imgContainerPopup.scrollLeft += left;
     }
 };
 

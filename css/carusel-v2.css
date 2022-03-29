@@ -278,7 +278,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    bottom: 30px;
+    bottom: 50px;
 }
 .carusel-second > .images-list-container{
     flex-direction: row;
@@ -308,7 +308,13 @@
   height: auto;
 }
 @media screen and (max-width: 650px){
-    .carusel-second > .images-list-container{
-      max-width: 25%;
+    .carusel-v2-arrow-left, .carusel-v2-arrow-right{
+      display: none;
+    }
+    .carusel-v2-popup{
+      justify-content: center;
+    }
+    .carusel-v2-popup-img{
+      max-width: 360px;
     }
 }

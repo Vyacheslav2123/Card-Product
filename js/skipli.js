@@ -1,5 +1,5 @@
 const glImg = document.querySelector(".carusel-v2__important-img");
-const imgContainer = document.querySelector(".images-list-container");
+const imgContainer = document.querySelectorAll(".images-list-container")[1];
 const images = document.querySelectorAll(".images-list-img-container");
 const arrow = document.querySelector(".images-list__arrow");
 

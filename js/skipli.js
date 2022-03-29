@@ -54,6 +54,7 @@ function changePopupImg(m){
     popupImg.src = Array.prototype.slice.call(imgContainerPopup).filter(e => !(e instanceof Text))[currentPosition].src;
 }
 
+
 function togglePopup(open = true){
     if(open) {
         popup.classList.add("carusel-v2-popup-view");

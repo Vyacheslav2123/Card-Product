@@ -288,6 +288,7 @@
     bottom: 10px;
 }
 .carusel-second{
+    position: relative;
     width: 100%;
 }
 .carusel-second > .images-list-container{
@@ -304,13 +305,14 @@
 .carusel-second > .images-list__arrow{
   margin-bottom: 0px;
   margin-top: 0px;
+  position: absolute;
   transform: rotate(90deg);
 }
 .carusel-second > .images-list__arrow:first-child{
-  margin-left: 15px;
+  right: 15px;
 }
 .carusel-second > .images-list__arrow:last-child{
-  margin-right: 15px;
+  left: 15px;
 }
 .carusel-second {
     flex-direction: row-reverse;

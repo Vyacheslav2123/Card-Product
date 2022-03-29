@@ -251,7 +251,7 @@
 .carusel-v2-exit > div:last-child{
   transform: rotate(-45deg);
 }
-.carusel-v2-arrow-left, .carusel-v2-arrow-left{
+.carusel-v2-arrow-left, .carusel-v2-arrow-right{
     width: 20px;
     height: 20px;
     transform: rotate(-45deg);

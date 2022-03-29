@@ -275,9 +275,9 @@
     border-bottom: 4px solid;
     border-right: 4px solid;
 }
-.carusel-v2-popup-img{
-    max-width: 400px;
-    max-height: 70vh;
+.carusel-v2-popup-img {
+    max-width: 90%;
+    max-height: 65%;
 }
 .carusel-center{
     position: absolute;

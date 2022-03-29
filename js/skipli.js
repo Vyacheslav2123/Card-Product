@@ -14,8 +14,7 @@ let ProductDetailPageBySkipli = function (event) {
     if (event.type == "mouseover" || event.type == "click") {
         if (event.target.classList.contains("images-list-img")) {
             currentPosition = getIndex(event.target);
-            glImg.src = event.target.src;
-            popupImg.src = event.target.src;
+            changePopupImg(0);
             images.forEach((item) => {
                 item.classList.remove("active");
             });

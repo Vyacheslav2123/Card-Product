@@ -81,15 +81,15 @@ function getIndex(el){
 function getOneWidth(){
         let anyImage = document.querySelector(".carusel-second > .images-list-container > .images-list-img-container");
         let oneCss = getComputedStyle(anyImage);
-	return anyImage.clientWidth + parseFloat(oneCss.marginLeft) + parseFloat(oneCss.marginRight);
+	return anyImage.offsetWidth + parseFloat(oneCss.marginLeft) + parseFloat(oneCss.marginRight);
 }
 
 function SkipliOnResize(e){
-	//let forCheck = document.querySelector(".carusel-second > .images-list-container");
-        //forCheck.style.width = "45%";
-	//let count = Math.floor(forCheck.clientWidth / getOneWidth());
-	//forCheck.style.width = count * getOneWidth() + "px";
-	//forCheck.style.minWidth = count * getOneWidth() + "px";
+	if(window.innerWidth < (maxCurrentPosition + 1) * getOneWidth()) {
+		for(let el of document.querySelectorAll(".carusel-second > .images-list__arrow")){
+		    el.style.display = "flex";
+		}
+	}
 }
 
 document.querySelector(".carusel-v2-exit").addEventListener("click", () => togglePopup(false));

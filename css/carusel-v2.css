@@ -206,7 +206,8 @@
 }
 @media screen and (max-width: 405px) {
     .carusel-v2__important-img {
-    height: 220px;
+    height: auto;
+    min-width: 320px;
     width: 320px;
     }
 }

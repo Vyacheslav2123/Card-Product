@@ -6,6 +6,8 @@ const arrow = document.querySelector(".images-list__arrow");
 const popup = document.querySelector(".carusel-v2-popup");
 const popupImg = document.querySelector(".carusel-v2-popup > .carusel-v2-popup-img");
 
+let maxCurrentPosition = Array.prototype.slice.call(imgContainerPopup.childNodes).length - 1;
+
 let currentPosition = 0;
 
 let ProductDetailPageBySkipli = function (event) {
@@ -21,6 +23,8 @@ let ProductDetailPageBySkipli = function (event) {
         }
     }
     if (event.type == "click") {
+        if(event.target.classList.contains("carusel-v2-arrow-right") changePopupImg(1);
+        else if(event.target.classList.contains("carusel-v2-arrow-left") changePopupImg(-1);
         if(event.target.classList.contains("images-list-img") || event.target.classList.contains("carusel-v2__important-img")){
             currentPosition = getIndex(event.target);
             togglePopup(true);
@@ -43,6 +47,12 @@ let ProductDetailPageBySkipli = function (event) {
         });
     }
 };
+
+function changePopupImg(m){
+    currentPosition = Math.min(m, maxCurrentPosition);
+    currentPosition = currentPosition < 0 ? 0 : currentPosition;
+    popupImg.src = Array.prototype.slice.call(imgContainerPopup).filter(e => !(e instanceof Text))[currentPosition].src;
+}
 
 function togglePopup(open = true){
     if(open) {

@@ -11,7 +11,7 @@ let maxCurrentPosition = Array.prototype.slice.call(imgContainerPopup.childNodes
 let currentPosition = 0;
 
 let ProductDetailPageBySkipli = function (event) {
-    if (event.type == "mouseover") {
+    if (event.type == "mouseover" || event.type == "click") {
         if (event.target.classList.contains("images-list-img")) {
             currentPosition = getIndex(event.target);
             glImg.src = event.target.src;
@@ -26,7 +26,7 @@ let ProductDetailPageBySkipli = function (event) {
         if(event.target.classList.contains("carusel-v2-arrow-right")) changePopupImg(1);
         else if(event.target.classList.contains("carusel-v2-arrow-left")) changePopupImg(-1);
         if(event.target.classList.contains("images-list-img") || event.target.classList.contains("carusel-v2__important-img")){
-            currentPosition = getIndex(event.target);
+            currentPosition = getIndex(getChild(document.querySelector(".images-list-img-container.active")));
             togglePopup(true);
             popupImg.src = event.target.src;
         }
@@ -52,6 +52,7 @@ function changePopupImg(m){
     currentPosition = Math.min(currentPosition + m, maxCurrentPosition);
     currentPosition = currentPosition < 0 ? 0 : currentPosition;
     popupImg.src = getChild(Array.prototype.slice.call(imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[currentPosition]).src;
+    glImg.src = popupImg.src;
 }
 
 
@@ -77,9 +78,25 @@ function getIndex(el){
     return whereSearch.indexOf(whoSearch)
 }
 
+function getOneWidth(){
+        let anyImage = document.querySelector(".carusel-second > .images-list-container > .images-list-img-container");
+        let oneCss = getComputedStyle(anyImage);
+	return anyImage + parseFloat(oneCss.marginLeft) + parseFloat(oneCss.marginRight);
+}
+
+function SkipliOnResize(e){
+	let forCheck = document.querySelector(".carusel-second > .images-list-container");
+        forCheck.style.width = "45%";
+	let count = Math.floor(forCheck.clientWidth / getOneWidth());
+	forCheck.style.width = count * getOneWidth() + "px";
+}
+
 document.querySelector(".carusel-v2-exit").addEventListener("click", () => togglePopup(false));
 document.addEventListener("mouseover", ProductDetailPageBySkipli);
 document.addEventListener("click", ProductDetailPageBySkipli);
+window.addEventListener("resize", SkipliOnResize);
+window.addEventListener("load", SkipliOnResize);
+window.addEventListener("load", () => changePopupImg(0));
 
 
 //MOBILE

@@ -301,3 +301,14 @@
 .carusel-second > .images-list__arrow:last-child{
   margin-left: 15px;
 }
+@media screen and (max-width: 650px){
+    .carusel-second {
+        flex-direction: row;
+    }
+    .carusel-second > .images-list-container{
+      max-width: 25%;
+    }
+    .carusel-second > .images-list-container > .images-list-img{
+      height: auto;
+    }
+}

@@ -23,8 +23,8 @@ let ProductDetailPageBySkipli = function (event) {
         }
     }
     if (event.type == "click") {
-        if(event.target.classList.contains("carusel-v2-arrow-right") changePopupImg(1);
-        else if(event.target.classList.contains("carusel-v2-arrow-left") changePopupImg(-1);
+        if(event.target.classList.contains("carusel-v2-arrow-right")) changePopupImg(1);
+        else if(event.target.classList.contains("carusel-v2-arrow-left")) changePopupImg(-1);
         if(event.target.classList.contains("images-list-img") || event.target.classList.contains("carusel-v2__important-img")){
             currentPosition = getIndex(event.target);
             togglePopup(true);

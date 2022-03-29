@@ -58,6 +58,10 @@ function changePopupImg(m){
     Array.prototype.slice.call(imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[currentPosition]?.classList?.add("active");
     Array.prototype.slice.call(imgContainer.childNodes).filter(e => !(e instanceof Text))[currentPosition]?.classList?.add("active");
     document.querySelector(".carusel-v2-popup-index").innerText = (currentPosition + 1) + " из " + (maxCurrentPosition + 1);
+    document.querySelector(".images-list-container").scroll({
+        left: (currentPosition * getOneWidth()) - (window.innerWidth / 2) + (getOneWidth() / 2),
+	behavior: "smooth"
+    })
 }
 
 

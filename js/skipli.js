@@ -1,90 +1,90 @@
-const glImg = document.querySelector(".carusel-v2__important-img");
-const imgContainer = document.querySelectorAll(".images-list-container")[1];
-const imgContainerPopup = document.querySelectorAll(".images-list-container")[0];
-const images = document.querySelectorAll(".images-list-img-container");
-const arrow = document.querySelector(".images-list__arrow");
-const popup = document.querySelector(".carusel-v2-popup");
-const popupImg = document.querySelector(".carusel-v2-popup > .carusel-v2-popup-img");
+const Skipli_glImg = document.querySelector(".carusel-v2__important-img");
+const Skipli_imgContainer = document.querySelectorAll(".images-list-container")[1];
+const Skipli_imgContainerPopup = document.querySelectorAll(".images-list-container")[0];
+const Skipli_images = document.querySelectorAll(".images-list-img-container");
+const Skipli_= document.querySelector(".images-list__arrow");
+const Skipli_popup = document.querySelector(".carusel-v2-popup");
+const Skipli_popupImg = document.querySelector(".carusel-v2-popup > .carusel-v2-popup-img");
 
-let maxCurrentPosition = Array.prototype.slice.call(imgContainerPopup.childNodes).filter(e => !(e instanceof Text)).length - 1;
+let Skipli_maxCurrentPosition = Array.prototype.slice.call(Skipli_imgContainerPopup.childNodes).filter(e => !(e instanceof Text)).length - 1;
 
-let currentPosition = 0;
+let Skipli_currentPosition = 0;
 
 let ProductDetailPageBySkipli = function (event) {
     if (event.type == "mouseover" || event.type == "click") {
         if (event.target.classList.contains("images-list-img")) {
-            currentPosition = getIndex(event.target);
-            changePopupImg(0);
-            images.forEach((item) => {
+            Skipli_currentPosition = Skipli_getIndex(event.target);
+            Skipli_changePopupImg(0);
+            Skipli_images.forEach((item) => {
                 item.classList.remove("active");
             });
             event.target.parentElement.classList.add("active");
         }
     }
     if (event.type == "click") {
-        if(event.target.classList.contains("carusel-v2-arrow-right")) changePopupImg(1);
-        else if(event.target.classList.contains("carusel-v2-arrow-left")) changePopupImg(-1);
+        if(event.target.classList.contains("carusel-v2-arrow-right")) Skipli_changePopupImg(1);
+        else if(event.target.classList.contains("carusel-v2-arrow-left")) Skipli_changePopupImg(-1);
         if(event.target.classList.contains("images-list-img") || event.target.classList.contains("carusel-v2__important-img")){
-            currentPosition = getIndex(getChild(document.querySelector(".images-list-img-container.active")));
-            togglePopup(true);
-            popupImg.src = event.target.src;
+            Skipli_currentPosition = Skipli_getIndex(Skipli_getChild(document.querySelector(".images-list-img-container.active")));
+            Skipli_togglePopup(true);
+            Skipli_popupImg.src = event.target.src;
         }
         let top = 0;
         if (event.target.classList.contains("images-list__arrow-bottom")) top = 60;
         else if (event.target.classList.contains("images-list__arrow-top")) top = -60;
-        imgContainer.scrollBy({
+        Skipli_imgContainer.scrollBy({
             top,
             behavior: 'smooth'
         });
         let left = -1;
         if (event.target.classList.contains("images-list__arrow-bottom")) left = -1;
         else if (event.target.classList.contains("images-list__arrow-top")) left = 1;
-        imgContainer.scrollLeft += left * 70;
+        Skipli_imgContainer.scrollLeft += left * 70;
     }
 };
 
-function changePopupImg(m){
-    currentPosition = Math.min(currentPosition + m, maxCurrentPosition);
-    currentPosition = currentPosition < 0 ? 0 : currentPosition;
-    popupImg.src = getChild(Array.prototype.slice.call(imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[currentPosition]).src;
-    glImg.src = popupImg.src;
-    images.forEach((item) => {
+function Skipli_changePopupImg(m){
+    Skipli_currentPosition = Math.min(Skipli_currentPosition + m, Skipli_maxCurrentPosition);
+    Skipli_currentPosition = Skipli_currentPosition < 0 ? 0 : Skipli_currentPosition;
+    Skipli_popupImg.src = Skipli_getChild(Array.prototype.slice.call(Skipli_imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[Skipli_currentPosition]).src;
+    Skipli_glImg.src = Skipli_popupImg.src;
+    Skipli_images.forEach((item) => {
         item.classList.remove("active");
     });
-    Array.prototype.slice.call(imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[currentPosition]?.classList?.add("active");
-    Array.prototype.slice.call(imgContainer.childNodes).filter(e => !(e instanceof Text))[currentPosition]?.classList?.add("active");
-    document.querySelector(".carusel-v2-popup-index").innerText = (currentPosition + 1) + " из " + (maxCurrentPosition + 1);
-    imgContainerPopup.scroll({
-        left: (currentPosition * getOneWidth()) - (window.innerWidth / 2) + (getOneWidth() / 2),
+    Array.prototype.slice.call(Skipli_imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[Skipli_currentPosition]?.classList?.add("active");
+    Array.prototype.slice.call(Skipli_imgContainer.childNodes).filter(e => !(e instanceof Text))[Skipli_currentPosition]?.classList?.add("active");
+    document.querySelector(".carusel-v2-popup-index").innerText = (Skipli_currentPosition + 1) + " из " + (Skipli_maxCurrentPosition + 1);
+    Skipli_imgContainerPopup.scroll({
+        left: (Skipli_currentPosition * Skipli_getOneWidth()) - (window.innerWidth / 2) + (Skipli_getOneWidth() / 2),
 	behavior: "smooth"
     })
 }
 
 
-function getChild(el, n = 0){
+function Skipli_getChild(el, n = 0){
     return Array.prototype.slice.call(el.childNodes).filter(e => !(e instanceof Text))[n];
 }
 
-function togglePopup(open = true){
+function Skipli_togglePopup(open = true){
     if(open) {
 	setTimeout(SkipliOnResize, 100);
-        popup.classList.add("carusel-v2-popup-view");
+        Skipli_popup.classList.add("carusel-v2-popup-view");
         document.body.style.position = "fixed";
     }
     else {
-        popup.classList.remove("carusel-v2-popup-view");
+        Skipli_popup.classList.remove("carusel-v2-popup-view");
         document.body.style.position = "relative";
     }
 }
 
-function getIndex(el){
+function Skipli_getIndex(el){
     let whoSearch = el.parentNode;
     let whereSearch = whoSearch.parentNode.childNodes;
     whereSearch = Array.prototype.slice.call(whereSearch).filter(e => !(e instanceof Text));
     return whereSearch.indexOf(whoSearch)
 }
 
-function getOneWidth(){
+function Skipli_getOneWidth(){
         let anyImage = document.querySelector(".carusel-second > .images-list-container > .images-list-img-container");
         let oneCss = getComputedStyle(anyImage);
 	return anyImage.offsetWidth + parseFloat(oneCss.marginLeft) + parseFloat(oneCss.marginRight);
@@ -92,33 +92,33 @@ function getOneWidth(){
 
 function SkipliOnResize(){
 	let c_display = "none";
-	if(window.innerWidth < (maxCurrentPosition + 1) * getOneWidth()) c_display = "flex";
+	if(window.innerWidth < (Skipli_maxCurrentPosition + 1) * Skipli_getOneWidth()) c_display = "flex";
 	for(let el of document.querySelectorAll(".carusel-second > .images-list__arrow")){
 	    el.style.display = c_display;
 	}
 }
 
-document.querySelector(".carusel-v2-exit").addEventListener("click", () => togglePopup(false));
+document.querySelector(".carusel-v2-exit").addEventListener("click", () => Skipli_togglePopup(false));
 document.addEventListener("mouseover", ProductDetailPageBySkipli);
 document.addEventListener("click", ProductDetailPageBySkipli);
 window.addEventListener("resize", SkipliOnResize);
 window.addEventListener("load", SkipliOnResize);
-window.addEventListener("load", () => changePopupImg(0));
+window.addEventListener("load", () => Skipli_changePopupImg(0));
 
 
 //MOBILE
-let x = {};
-let needToSwipe = 50;
-popup.addEventListener("touchstart", e => {
+let Skipli_x = {};
+let Skipli_needToSwipe = 50;
+Skipli_popup.addEventListener("touchstart", e => {
 	if (e.changedTouches && e.changedTouches[0]) {
 		let cur = e.changedTouches[0];
-		x[cur.identifier] = cur.pageX;
+		Skipli_x[cur.identifier] = cur.pageX;
 	}
 })
-popup.addEventListener("touchend", e => {
+Skipli_popup.addEventListener("touchend", e => {
     if (e.changedTouches && e.changedTouches[0]) {
 		let cur = e.changedTouches[0];
-		if (cur.pageX <= (x[cur.identifier] - needToSwipe)) changePopupImg(1);
-        else if (cur.pageX >= (x[cur.identifier] + needToSwipe)) changePopupImg(-1);
+		if (cur.pageX <= (Skipli_x[cur.identifier] - Skipli_needToSwipe)) Skipli_changePopupImg(1);
+        else if (cur.pageX >= (Skipli_x[cur.identifier] + Skipli_needToSwipe)) Skipli_changePopupImg(-1);
     }
 });

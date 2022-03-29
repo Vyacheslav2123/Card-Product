@@ -118,8 +118,11 @@
     display: none;
 }
 @media screen and (max-width: 560px) {
+    .carusel-v2.nav{
+        margin-top: 40px;
+    }
     .main-carusel{
-       display: none;
+        display: none;
     }
     .carusel-v2 {
         flex-direction: column-reverse;

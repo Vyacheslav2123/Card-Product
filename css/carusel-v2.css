@@ -287,9 +287,13 @@
     align-items: center;
     bottom: 10px;
 }
+.carusel-second{
+    width: 100%;
+}
 .carusel-second > .images-list-container{
     flex-direction: row;
-    max-width: 45%;
+    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 .carusel-second > .images-list-container > .images-list-img-container{

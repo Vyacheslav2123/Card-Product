@@ -256,6 +256,7 @@
     height: 20px;
     transform: rotate(-45deg);
     color: #000;
+    cursour: pointer;
 }
 .carusel-v2-arrow-left{
     margin-left: 20px;

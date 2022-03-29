@@ -51,9 +51,13 @@ let ProductDetailPageBySkipli = function (event) {
 function changePopupImg(m){
     currentPosition = Math.min(m, maxCurrentPosition);
     currentPosition = currentPosition < 0 ? 0 : currentPosition;
-    popupImg.src = Array.prototype.slice.call(imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[currentPosition].src;
+    popupImg.src = getChild(Array.prototype.slice.call(imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[currentPosition]).src;
 }
 
+
+function getChild(el, n = 0){
+    return Array.prototype.slice.call(el.childNodes).filter(e => !(e instanceof Text))[n];
+}
 
 function togglePopup(open = true){
     if(open) {

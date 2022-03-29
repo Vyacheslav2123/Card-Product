@@ -304,11 +304,11 @@
 .carusel-second {
     flex-direction: row-reverse;
 }
+.carusel-second > .images-list-container > .images-list-img-container > .images-list-img{
+  height: auto;
+}
 @media screen and (max-width: 650px){
     .carusel-second > .images-list-container{
       max-width: 25%;
-    }
-    .carusel-second > .images-list-container > .images-list-img-container > .images-list-img{
-      height: auto;
     }
 }

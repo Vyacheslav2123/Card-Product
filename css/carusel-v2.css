@@ -96,8 +96,8 @@
     transition: .3s ease;
 }
 .images-list-img-container {
-    min-width: 40px;
-    width: 40px;
+    min-width: 50px;
+    width: 50px;
     height: 80px;
     display: flex;
     align-items: center;

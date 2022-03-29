@@ -6,7 +6,7 @@ const arrow = document.querySelector(".images-list__arrow");
 const popup = document.querySelector(".carusel-v2-popup");
 const popupImg = document.querySelector(".carusel-v2-popup > .carusel-v2-popup-img");
 
-let maxCurrentPosition = Array.prototype.slice.call(imgContainerPopup.childNodes).length - 1;
+let maxCurrentPosition = Array.prototype.slice.call(imgContainerPopup.childNodes).filter(e => !(e instanceof Text)).length - 1;
 
 let currentPosition = 0;
 

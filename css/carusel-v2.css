@@ -293,7 +293,7 @@
 .carusel-second > .images-list__arrow{
   margin-bottom: 0px;
   margin-top: 0px;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
 .carusel-second > .images-list__arrow:first-child{
   margin-right: 15px;
@@ -303,7 +303,7 @@
 }
 @media screen and (max-width: 650px){
     .carusel-second {
-        flex-direction: row;
+        flex-direction: row-reverse;
     }
     .carusel-second > .images-list-container{
       max-width: 25%;

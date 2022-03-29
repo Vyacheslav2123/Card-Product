@@ -67,6 +67,7 @@ function getChild(el, n = 0){
 }
 
 function togglePopup(open = true){
+    SkipliOnResize();
     if(open) {
         popup.classList.add("carusel-v2-popup-view");
         document.body.style.position = "fixed";
@@ -90,7 +91,7 @@ function getOneWidth(){
 	return anyImage.offsetWidth + parseFloat(oneCss.marginLeft) + parseFloat(oneCss.marginRight);
 }
 
-function SkipliOnResize(e){
+function SkipliOnResize(){
 	let c_display = "none";
 	if(window.innerWidth < (maxCurrentPosition + 1) * getOneWidth()) c_display = "flex";
 	for(let el of document.querySelectorAll(".carusel-second > .images-list__arrow")){

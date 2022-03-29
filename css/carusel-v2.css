@@ -296,15 +296,15 @@
   transform: rotate(90deg);
 }
 .carusel-second > .images-list__arrow:first-child{
-  margin-right: 15px;
-}
-.carusel-second > .images-list__arrow:last-child{
   margin-left: 15px;
 }
+.carusel-second > .images-list__arrow:last-child{
+  margin-right: 15px;
+}
+.carusel-second {
+    flex-direction: row-reverse;
+}
 @media screen and (max-width: 650px){
-    .carusel-second {
-        flex-direction: row-reverse;
-    }
     .carusel-second > .images-list-container{
       max-width: 25%;
     }

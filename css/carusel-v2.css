@@ -320,6 +320,20 @@
 .carusel-second > .images-list-container > .images-list-img-container > .images-list-img{
   height: auto;
 }
+
+.carusel-second > .images-list-container > .images-list-img-container {
+    width: 70px;
+    min-width: 70px;
+    height: 70px;
+    border: 1px solid #eee !important;
+    border-radius: 8px;
+}
+.carusel-second > .images-list-container > .images-list-img-container.active {
+    border-color: #a9e713 !important;
+}
+.carusel-second > .images-list-container > .images-list-img-container > .images-list-img {
+    max-height: 60px;
+}
 @media screen and (max-width: 650px){
     .carusel-center{
       bottom: 50px;

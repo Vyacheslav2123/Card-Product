@@ -137,7 +137,7 @@
     }
     .carusel-v2 .images-list {
         display: flex;
-        flex-direction: initial;
+        flex-direction: row-reverse;
     } 
     .carusel-v2 .images-list-container {
         display: flex;
@@ -168,11 +168,11 @@
     }
     .images-list__arrow:first-child {
         margin-bottom: 0;
-        transform: rotate(-90deg);
+        transform: rotate(90deg);
     }
     .images-list__arrow:last-child {
         margin-top: 0;
-        transform: rotate(-90deg);
+        transform: rotate(90deg);
     }
     .carusel-v2 nav {
         display: -webkit-box;

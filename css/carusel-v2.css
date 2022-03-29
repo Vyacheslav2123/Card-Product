@@ -303,6 +303,7 @@
    border-left: none !important;
 } 
 .carusel-second > .images-list__arrow{
+  display: none;
   margin-bottom: 0px;
   margin-top: 0px;
   position: absolute;

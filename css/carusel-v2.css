@@ -97,7 +97,7 @@
 }
 .carusel-v2__important-img {
     margin-left: 20px;
-    min-width: 400px;
+    max-width: 400px;
     width: 400px;
     background: url("https://c.dns-shop.ru/thumb/st4/fit/0/0/58e7f63a7ebb6fccc44cec2dd6fcb526/df012e460485b18a2b9d4cab568bd51a25a3db67fb23bb5172e6f4739b75db4e.jpg.webp") center no-repeat;
     background-size: cover;
@@ -107,7 +107,7 @@
     display: none;
 }
 @media screen and (max-width: 560px) {
-    carusel-v2__important-img{
+    .carusel-v2__important-img{
       margin-left: 0px;
     }
     .carusel-v2__carusel-v2.nav{

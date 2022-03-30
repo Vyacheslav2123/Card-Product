@@ -26,7 +26,7 @@
 		if(event.target.classList.contains("carusel-v2__carusel-v2-arrow-right")) Skipli_changePopupImg(1);
 		else if(event.target.classList.contains("carusel-v2__carusel-v2-arrow-left")) Skipli_changePopupImg(-1);
 		if(event.target.classList.contains("carusel-v2__images-list-img") || event.target.classList.contains("carusel-v2__important-img")){
-		    Skipli_currentPosition = Skipli_getIndex(Skipli_getChild(document.querySelector(".carusel-v2__images-list-img-container.active")));
+		    Skipli_currentPosition = Skipli_getIndex(Skipli_getChild(document.querySelector(".carusel-v2__images-list-img-container.carusel-v2__active")));
 		    Skipli_togglePopup(true);
 		    Skipli_popupImg.src = event.target.src;
 		}

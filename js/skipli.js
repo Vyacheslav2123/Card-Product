@@ -1,3 +1,4 @@
+(() => {
 const Skipli_glImg = document.querySelector(".carusel-v2__important-img");
 const Skipli_imgContainer = document.querySelectorAll(".images-list-container")[1];
 const Skipli_imgContainerPopup = document.querySelectorAll(".images-list-container")[0];
@@ -122,3 +123,4 @@ Skipli_popup.addEventListener("touchend", e => {
         else if (cur.pageX >= (Skipli_x[cur.identifier] + Skipli_needToSwipe)) Skipli_changePopupImg(-1);
     }
 });
+})();

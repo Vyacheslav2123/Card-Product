@@ -86,7 +86,7 @@
 	}
 
 	function Skipli_getOneWidth(){
-		let anyImage = document.querySelector(".carusel_second");
+		let anyImage = document.querySelector(".carusel-v2__images-list-container > .carusel-v2__images-list-img-container");
 		let oneCss = getComputedStyle(anyImage);
 		return anyImage.offsetWidth + parseFloat(oneCss.marginLeft) + parseFloat(oneCss.marginRight);
 	}

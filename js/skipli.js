@@ -41,6 +41,7 @@
 		if (event.target.classList.contains("carusel-v2__images-list__arrow-bottom")) left = -1;
 		else if (event.target.classList.contains("carusel-v2__images-list__arrow-top")) left = 1;
 		Skipli_imgContainer.scrollLeft += left * 70;
+		Skipli_changePopupImg(left);
 	    }
 	};
 

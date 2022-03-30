@@ -1,5 +1,5 @@
 (() => {
-	const Skipli_glImg = document.querySelector(".carusel-v2__carusel-v2__important-img");
+	const Skipli_glImg = document.querySelector(".carusel-v2__important-img");
 	const Skipli_imgContainer = document.querySelectorAll(".carusel-v2__images-list-container")[1];
 	const Skipli_imgContainerPopup = document.querySelectorAll(".carusel-v2__images-list-container")[0];
 	const Skipli_images = document.querySelectorAll(".carusel-v2__images-list-img-container");

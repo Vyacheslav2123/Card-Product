@@ -54,7 +54,7 @@
 	    });
 	    Array.prototype.slice.call(Skipli_imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[Skipli_currentPosition]?.classList?.add("active");
 	    Array.prototype.slice.call(Skipli_imgContainer.childNodes).filter(e => !(e instanceof Text))[Skipli_currentPosition]?.classList?.add("active");
-	    document.querySelector(".carusel-v2-popup-index").innerText = (Skipli_currentPosition + 1) + " из " + (Skipli_maxCurrentPosition + 1);
+	    document.querySelector(".carusel-v2__carusel-v2-popup-index").innerText = (Skipli_currentPosition + 1) + " из " + (Skipli_maxCurrentPosition + 1);
 	    Skipli_imgContainerPopup.scroll({
 		left: (Skipli_currentPosition * Skipli_getOneWidth()) - (window.innerWidth / 2) + (Skipli_getOneWidth() / 2),
 		behavior: "smooth"

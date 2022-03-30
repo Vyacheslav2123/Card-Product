@@ -125,6 +125,7 @@
     .carusel-v2__carusel-v2 .images-list {
         display: flex;
         flex-direction: row-reverse;
+        align-items: flex-start;
     } 
     .carusel-v2__carusel-v2 .images-list-container {
         display: flex;

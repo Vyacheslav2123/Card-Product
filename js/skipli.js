@@ -26,7 +26,7 @@
 		if(event.target.classList.contains("carusel-v2-arrow-right")) Skipli_changePopupImg(1);
 		else if(event.target.classList.contains("carusel-v2-arrow-left")) Skipli_changePopupImg(-1);
 		if(event.target.classList.contains("images-list-img") || event.target.classList.contains("carusel-v2__important-img")){
-		    Skipli_currentPosition = Skipli_getIndex(Skipli_getChild(document.querySelector(".images-list-img-container.active")));
+		    Skipli_currentPosition = Skipli_getIndex(Skipli_getChild(document.querySelector(".carusel-v2__images-list-img-container.active")));
 		    Skipli_togglePopup(true);
 		    Skipli_popupImg.src = event.target.src;
 		}
@@ -86,7 +86,7 @@
 	}
 
 	function Skipli_getOneWidth(){
-		let anyImage = document.querySelector(".carusel-second > .images-list-container > .images-list-img-container");
+		let anyImage = document.querySelector(".carusel-v2__carusel-second > .carusel-v2__images-list-container > .carusel-v2__images-list-img-container");
 		let oneCss = getComputedStyle(anyImage);
 		return anyImage.offsetWidth + parseFloat(oneCss.marginLeft) + parseFloat(oneCss.marginRight);
 	}
@@ -94,12 +94,12 @@
 	function SkipliOnResize(){
 		let c_display = "none";
 		if(window.innerWidth < (Skipli_maxCurrentPosition + 1) * Skipli_getOneWidth()) c_display = "flex";
-		for(let el of document.querySelectorAll(".carusel-second > .images-list__arrow")){
+		for(let el of document.querySelectorAll(".carusel-v2__carusel-second > .carusel-v2__images-list__arrow")){
 		    el.style.display = c_display;
 		}
 	}
 
-	document.querySelector(".carusel-v2-exit").addEventListener("click", () => Skipli_togglePopup(false));
+	document.querySelector(".carusel-v2__carusel-v2-exit").addEventListener("click", () => Skipli_togglePopup(false));
 	document.addEventListener("mouseover", ProductDetailPageBySkipli);
 	document.addEventListener("click", ProductDetailPageBySkipli);
 	window.addEventListener("resize", SkipliOnResize);

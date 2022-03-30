@@ -316,7 +316,7 @@
     border: 1px solid #eee !important;
     border-radius: 8px;
 }
-.carusel-v2__carusel-second > .carusel-v2__images-list-container > .carusel-v2__images-list-img-container.active {
+.carusel-v2__carusel-second > .carusel-v2__images-list-container > .carusel-v2__images-list-img-container.carusel-v2__active {
     border-color: #a9e713 !important;
 }
 .carusel-v2__carusel-second > .carusel-v2__images-list-container > .carusel-v2__images-list-img-container > .carusel-v2__images-list-img {

@@ -95,7 +95,7 @@
   border-left: 3px solid #90c511;
   border-radius: 1px;
 }
-.carusel-v2__carusel-v2__important-img {
+.carusel-v2__important-img {
     margin-left: 20px;
     min-width: 400px;
     width: 400px;
@@ -107,7 +107,7 @@
     display: none;
 }
 @media screen and (max-width: 560px) {
-    .carusel-v2__carusel-v2__important-img{
+    carusel-v2__important-img{
       margin-left: 0px;
     }
     .carusel-v2__carusel-v2.nav{

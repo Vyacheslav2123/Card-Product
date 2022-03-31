@@ -28,7 +28,7 @@
 		if(event.target.classList.contains("carusel-v2__images-list-img") || event.target.classList.contains("carusel-v2__important-img")){
 		    Skipli_currentPosition = Skipli_getIndex(Skipli_getChild(document.querySelector(".carusel-v2__images-list-img-container.carusel-v2__active")));
 		    Skipli_togglePopup(true);
-		    Skipli_popupImg.src = event.target.src;
+		    Skipli_popupImg.style.backgroundImage = event.target.style.backgroundImage;
 		let top = 0;
 		if (event.target.classList.contains("carusel-v2__images-list__arrow-bottom")) top = 60;
 		else if (event.target.classList.contains("carusel-v2__images-list__arrow-top")) top = -60;
@@ -48,8 +48,8 @@
 	function Skipli_changePopupImg(m){
 	    Skipli_currentPosition = Math.min(Skipli_currentPosition + m, Skipli_maxCurrentPosition);
 	    Skipli_currentPosition = Skipli_currentPosition < 0 ? 0 : Skipli_currentPosition;
-	    Skipli_popupImg.src = Skipli_getChild(Array.prototype.slice.call(Skipli_imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[Skipli_currentPosition]).src;
-	    Skipli_glImg.src = Skipli_popupImg.src;
+	    Skipli_popupImg.style.backgroundImage = Skipli_getChild(Array.prototype.slice.call(Skipli_imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[Skipli_currentPosition]).style.backgroundImage;
+	    Skipli_glImg.style.backgroundImage = Skipli_popupImg.style.backgroundImage;
 	    Skipli_images.forEach((item) => {
 		item.classList.remove("carusel-v2__active");
 	    });

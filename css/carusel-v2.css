@@ -97,11 +97,13 @@
 }
 .carusel-v2__important-img {
     margin-left: 20px;
-    max-width: 400px;
-    min-width: 400px;
-    width: 400px;
-    background: url("https://c.dns-shop.ru/thumb/st4/fit/0/0/58e7f63a7ebb6fccc44cec2dd6fcb526/df012e460485b18a2b9d4cab568bd51a25a3db67fb23bb5172e6f4739b75db4e.jpg.webp") center no-repeat;
-    background-size: cover;
+    max-width: 350px;
+    min-width: 350px;
+    height: 350px;
+    max-height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     cursor: pointer;
 }
 .carusel-v2__carusel-v2 nav {

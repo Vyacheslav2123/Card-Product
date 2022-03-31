@@ -203,6 +203,10 @@
        text-decoration: none;
     }
 }
+
+.carusel-v2__images-list-container{
+    height: auto;
+}
 @media screen and (max-width: 405px) {
     .carusel-v2__important-img {
     min-width: 320px;

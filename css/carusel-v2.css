@@ -205,7 +205,7 @@
 }
 
 .carusel-v2__images-list-container{
-    height: auto;
+    height: auto !important;
 }
 @media screen and (max-width: 405px) {
     .carusel-v2__important-img {

@@ -349,3 +349,6 @@
       max-width: 360px;
     }
 }
+.carusel-v2__hide-arrows > .carusel-v2__images-list__arrow {
+  display: none;
+}

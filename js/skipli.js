@@ -93,6 +93,14 @@
 	}
 
 	function SkipliOnResize(){
+		var nC = document.querySelectorAll(".carusel-v2__images-list-container")[1];
+		if(window.matchMedia("(max-width: 560px)").matches){
+			if(nC.scrollWidth <= nC.offsetWidth) nC.classList.add("carusel-v2__hide-arrows");
+			else nC.classList.remove("carusel-v2__hide-arrows");
+		}else{
+			if(nC.scrollHeight <= nC.offsetHeight) nC.classList.add("carusel-v2__hide-arrows");
+			else nC.classList.remove("carusel-v2__hide-arrows");
+		}
 		let c_display = "none";
 		if(window.innerWidth < (Skipli_maxCurrentPosition + 1) * Skipli_getOneWidth()) c_display = "flex";
 		for(let el of document.querySelectorAll(".carusel-v2__carusel-second > .carusel-v2__images-list__arrow")){

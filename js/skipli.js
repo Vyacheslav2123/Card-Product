@@ -48,8 +48,8 @@
 	function Skipli_changePopupImg(m){
 	    Skipli_currentPosition = Math.min(Skipli_currentPosition + m, Skipli_maxCurrentPosition);
 	    Skipli_currentPosition = Skipli_currentPosition < 0 ? 0 : Skipli_currentPosition;
-	    Skipli_popupImg.src = Skipli_getChild(Array.prototype.slice.call(Skipli_imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[Skipli_currentPosition]).style.backgroundImage.replace('url("', "").replace('")');
-	    Skipli_glImg.style.backgroundImage = `url('${Skipli_popupImg.src}')`;
+	    Skipli_glImg.style.backgroundImage = Skipli_getChild(Array.prototype.slice.call(Skipli_imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[Skipli_currentPosition]).style.backgroundImage;
+	    Skipli_popupImg.src = Skipli_glImg.style.backgroundImage.slice(5).replace(/..$/, "");
 	    Skipli_images.forEach((item) => {
 		item.classList.remove("carusel-v2__active");
 	    });

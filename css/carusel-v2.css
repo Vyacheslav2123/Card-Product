@@ -335,12 +335,14 @@
     top: -30px;
     font-size: 14px;
 }
+@media screen and (max-width: 750px){
+    .carusel-v2__carusel-v2-arrow-left, .carusel-v2__carusel-v2-arrow-right{
+      display: none;
+    }
+}
 @media screen and (max-width: 650px){
     .carusel-v2__carusel-center{
       bottom: 50px;
-    }
-    .carusel-v2__carusel-v2-arrow-left, .carusel-v2__carusel-v2-arrow-right{
-      display: none;
     }
     .carusel-v2__carusel-v2-popup{
       justify-content: center;

@@ -95,10 +95,10 @@
 	function SkipliOnResize(){
 		var nC = document.querySelectorAll(".carusel-v2__images-list-container")[1];
 		if(window.matchMedia("(max-width: 560px)").matches){
-			if(nC.scrollWidth <= nC.offsetWidth) nC.classList.add("carusel-v2__hide-arrows");
+			if(nC.scrollWidth <= nC.offsetWidth) nC.parentNode.classList.add("carusel-v2__hide-arrows");
 			else nC.classList.remove("carusel-v2__hide-arrows");
 		}else{
-			if(nC.scrollHeight <= nC.offsetHeight) nC.classList.add("carusel-v2__hide-arrows");
+			if(nC.scrollHeight <= nC.offsetHeight) nC.parentNode.classList.add("carusel-v2__hide-arrows");
 			else nC.classList.remove("carusel-v2__hide-arrows");
 		}
 		let c_display = "none";

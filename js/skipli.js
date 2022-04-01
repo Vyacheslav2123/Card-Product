@@ -36,7 +36,7 @@
 		    top,
 		    behavior: 'smooth'
 		});
-		let left = -1;
+		let left = 0;
 		if (event.target.classList.contains("carusel-v2__images-list__arrow-bottom")) left = -1;
 		else if (event.target.classList.contains("carusel-v2__images-list__arrow-top")) left = 1;
 		Skipli_imgContainer.scrollLeft += left * 70;
@@ -96,10 +96,10 @@
 		var nC = document.querySelectorAll(".carusel-v2__images-list-container")[1];
 		if(window.matchMedia("(max-width: 560px)").matches){
 			if(nC.scrollWidth <= nC.offsetWidth) nC.parentNode.classList.add("carusel-v2__hide-arrows");
-			else nC.classList.remove("carusel-v2__hide-arrows");
+			else nC.parentNode.classList.remove("carusel-v2__hide-arrows");
 		}else{
 			if(nC.scrollHeight <= nC.offsetHeight) nC.parentNode.classList.add("carusel-v2__hide-arrows");
-			else nC.classList.remove("carusel-v2__hide-arrows");
+			else nC.parentNode.classList.remove("carusel-v2__hide-arrows");
 		}
 		let c_display = "none";
 		if(window.innerWidth < (Skipli_maxCurrentPosition + 1) * Skipli_getOneWidth()) c_display = "flex";

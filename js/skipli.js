@@ -5,7 +5,7 @@
 	const Skipli_images = document.querySelectorAll(".carusel-v2__images-list-img-container");
 	const Skipli_= document.querySelector(".carusel-v2__images-list__arrow");
 	const Skipli_popup = document.querySelector(".carusel-v2__carusel-v2-popup");
-	const Skipli_popupImg = document.querySelector(".carusel-v2__carusel-v2-popup > .carusel-v2__carusel-v2-popup-img");
+	const Skipli_popupImg = document.querySelector(".carusel-v2__carusel-v2-popup-img");
 	
 	let Skipli_popupMaximize = false;
 	let Skipli_maxCurrentPosition = Array.prototype.slice.call(Skipli_imgContainerPopup.childNodes).filter(e => !(e instanceof Text)).length - 1;

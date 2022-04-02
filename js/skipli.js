@@ -13,7 +13,7 @@
 	let Skipli_currentPosition = 0;
 
 	let ProductDetailPageBySkipli = function (event) {
-            if(event.type == "click" && event.target.classList.contains(".carusel-v2__carusel-v2-popup-img")){
+            if(event.type == "click" && event.target.classList.contains("carusel-v2__carusel-v2-popup-img")){
 	    	toggleMax(e);
 	    }
 	    if (event.type == "mouseover" || event.type == "click") {

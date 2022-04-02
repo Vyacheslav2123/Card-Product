@@ -49,7 +49,7 @@
 	    Skipli_currentPosition = Math.min(Skipli_currentPosition + m, Skipli_maxCurrentPosition);
 	    Skipli_currentPosition = Skipli_currentPosition < 0 ? 0 : Skipli_currentPosition;
 	    var url = Skipli_getChild(Array.prototype.slice.call(Skipli_imgContainerPopup.childNodes).filter(e => !(e instanceof Text))[Skipli_currentPosition]).getAttribute("origin-src");
-	    Skipli_glImg.style.backgroundImage = `url(`${url}`)`;
+	    Skipli_glImg.style.backgroundImage = `url('${url}')`;
 	    Skipli_popupImg.src = url;
 	    Skipli_images.forEach((item) => {
 		item.classList.remove("carusel-v2__active");

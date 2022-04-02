@@ -10,12 +10,16 @@
     padding: 20px 0;
     position: relative;
 }
+.carusel-v2__carusel-v2-popup-cont{
+    width: 85%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .carusel-v2__carusel-v2-popup-img{
-      width: 85%;
-      height: 65%;
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
+      width: 100%;
+      height: auto;
       cursor: pointer;
 }
 .carusel-v2__images-list__arrow {

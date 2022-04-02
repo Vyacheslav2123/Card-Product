@@ -10,6 +10,10 @@
     padding: 20px 0;
     position: relative;
 }
+.carusel-v2__carusel-v2-popup-cont{
+      max-width: 90%;
+      max-height: 65%;
+}
 .carusel-v2__images-list__arrow {
     height: 30px;
     width: 30px;

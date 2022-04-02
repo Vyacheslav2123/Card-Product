@@ -6,12 +6,16 @@
 	const Skipli_= document.querySelector(".carusel-v2__images-list__arrow");
 	const Skipli_popup = document.querySelector(".carusel-v2__carusel-v2-popup");
 	const Skipli_popupImg = document.querySelector(".carusel-v2__carusel-v2-popup > .carusel-v2__carusel-v2-popup-img");
-
+	
+	let Skipli_popupMaximize = false;
 	let Skipli_maxCurrentPosition = Array.prototype.slice.call(Skipli_imgContainerPopup.childNodes).filter(e => !(e instanceof Text)).length - 1;
 
 	let Skipli_currentPosition = 0;
 
 	let ProductDetailPageBySkipli = function (event) {
+            if(event.type == "click" && event.target.classList.contains(".carusel-v2__carusel-v2-popup-img")){
+	    	toggleMax(e);
+	    }
 	    if (event.type == "mouseover" || event.type == "click") {
 		if (event.target.classList.contains("carusel-v2__images-list-img")) {
 		    Skipli_currentPosition = Skipli_getIndex(event.target);
@@ -91,6 +95,16 @@
 		let anyImage = document.querySelector(".carusel-v2__images-list-container > .carusel-v2__images-list-img-container");
 		let oneCss = getComputedStyle(anyImage);
 		return anyImage.offsetWidth + parseFloat(oneCss.marginLeft) + parseFloat(oneCss.marginRight);
+	}
+	function toggleMax(e){
+		Skipli_popupMaximize = !Skipli_popupMaximize;
+		Skipli_popupImg.style.backgroundSize = Skipli_popupMaximize ? "cover" : "contain";
+	}
+	function onPopupMove(e){
+		if(!Skipli_popupMaximize) return;
+		var rect = e.target.getBoundingClientRect();
+                var x = e.clientX - rect.left;
+                var y = e.clientY - rect.top;
 	}
 
 	function SkipliOnResize(){

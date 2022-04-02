@@ -98,7 +98,8 @@
 	}
 	function toggleMax(){
 		Skipli_popupMaximize = !Skipli_popupMaximize;
-		Skipli_popupImg.style.width = Skipli_popupMaximize ? "200%" : "100%";
+		Skipli_popupImg.style.maxWidth = Skipli_popupMaximize ? "200%" : "100%";
+		Skipli_popupImg.style.maxHeight = Skipli_popupMaximize ? "200%" : "100%";
 	}
 	function onPopupMove(e){
 		if(!Skipli_popupMaximize) return document.querySelector(".carusel-v2__carusel-v2-popup-img").style.backgroundPosition = "center";

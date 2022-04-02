@@ -14,7 +14,7 @@
 
 	let ProductDetailPageBySkipli = function (event) {
             if(event.type == "click" && event.target.classList.contains("carusel-v2__carusel-v2-popup-img")){
-	    	toggleMax(e);
+	    	toggleMax();
 	    }
 	    if (event.type == "mouseover" || event.type == "click") {
 		if (event.target.classList.contains("carusel-v2__images-list-img")) {
@@ -96,7 +96,7 @@
 		let oneCss = getComputedStyle(anyImage);
 		return anyImage.offsetWidth + parseFloat(oneCss.marginLeft) + parseFloat(oneCss.marginRight);
 	}
-	function toggleMax(e){
+	function toggleMax(){
 		Skipli_popupMaximize = !Skipli_popupMaximize;
 		Skipli_popupImg.style.backgroundSize = Skipli_popupMaximize ? "cover" : "contain";
 	}

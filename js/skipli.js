@@ -101,10 +101,11 @@
 		Skipli_popupImg.style.backgroundSize = Skipli_popupMaximize ? "cover" : "contain";
 	}
 	function onPopupMove(e){
-		if(!Skipli_popupMaximize) return;
+		if(!Skipli_popupMaximize) return document.querySelector(".carusel-v2__carusel-v2-popup-img").style.backgroundPosition = "center";
 		var rect = e.target.getBoundingClientRect();
                 var x = e.clientX - rect.left;
                 var y = e.clientY - rect.top;
+		document.querySelector(".carusel-v2__carusel-v2-popup-img").style.backgroundPosition = `-${x / 2.5}px -${y / 2.5}px`;
 	}
 
 	function SkipliOnResize(){

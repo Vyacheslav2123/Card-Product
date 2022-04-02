@@ -16,7 +16,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     position: relative;
 }
 .carusel-v2__carusel-v2-popup-img{
@@ -104,6 +103,7 @@
     width: 50px;
     height: 80px;
     display: flex;
+    background-color: #fff;
     align-items: center;
     justify-content: center;    
     border-left: 3px solid white;
@@ -274,6 +274,7 @@
     transform: rotate(-45deg);
     color: #000;
     cursor: pointer;
+    z-index: 10;
 }
 .carusel-v2__carusel-v2-arrow-left{
     margin-left: 30px;

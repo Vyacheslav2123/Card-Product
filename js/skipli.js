@@ -99,8 +99,8 @@
 	}
 	function toggleMax(){
 		Skipli_popupMaximize = !Skipli_popupMaximize;
-		Skipli_popupImg.style.maxWidth = Skipli_popupMaximize ? "200%" : "100%";
-		Skipli_popupImg.style.maxHeight = Skipli_popupMaximize ? "200%" : "100%";
+		Skipli_popupImg.style.maxWidth = Skipli_popupMaximize ? "150%" : "100%";
+		Skipli_popupImg.style.maxHeight = Skipli_popupMaximize ? "150%" : "100%";
 		if(!Skipli_popupMaximize){
 			document.querySelector(".carusel-v2__carusel-v2-popup-img").style.left = "initial";
 			document.querySelector(".carusel-v2__carusel-v2-popup-img").style.top = "initial";
@@ -114,11 +114,11 @@
 		}
 		var rect = Skipli_popupCont.getBoundingClientRect();
                 var x = e.clientX - rect.left;
-		var leftP = (x / (Skipli_popupCont.offsetWidth / 100)) / 2 - 25;
+		var leftP = -((x / (Skipli_popupCont.offsetWidth / 100)) / 2 - 25);
                 var y = e.clientY - rect.top;
-		var topP = (y / (Skipli_popupCont.offsetHeight / 100)) / 2 - 25;
-		document.querySelector(".carusel-v2__carusel-v2-popup-img").style.left = `-${leftP}%`;
-		document.querySelector(".carusel-v2__carusel-v2-popup-img").style.top = `-${topP}%`;
+		var topP = -((y / (Skipli_popupCont.offsetHeight / 100)) / 2 - 25);
+		document.querySelector(".carusel-v2__carusel-v2-popup-img").style.left = `${leftP}%`;
+		document.querySelector(".carusel-v2__carusel-v2-popup-img").style.top = `${topP}%`;
 	}
 
 	function SkipliOnResize(){

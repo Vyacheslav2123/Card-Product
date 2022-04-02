@@ -10,9 +10,12 @@
     padding: 20px 0;
     position: relative;
 }
-.carusel-v2__carusel-v2-popup-cont{
-      max-width: 90%;
-      max-height: 65%;
+.carusel-v2__carusel-v2-popup-img{
+      width: 85%;
+      height: 65%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
 }
 .carusel-v2__images-list__arrow {
     height: 30px;
@@ -273,10 +276,6 @@
     margin-right: 30px;
     border-bottom: 4px solid;
     border-right: 4px solid;
-}
-.carusel-v2__carusel-v2-popup-img {
-    max-width: 90%;
-    max-height: 65%;
 }
 .carusel-v2__carusel-center{
     position: absolute;

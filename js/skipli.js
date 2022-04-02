@@ -114,9 +114,9 @@
 		}
 		var rect = Skipli_popupCont.getBoundingClientRect();
                 var x = e.clientX - rect.left;
-		var leftP = -((x / (Skipli_popupCont.offsetWidth / 100)) / 2 - 25);
+		var leftP = -((x / (Skipli_popupCont.offsetWidth / 100)) / 2);
                 var y = e.clientY - rect.top;
-		var topP = -((y / (Skipli_popupCont.offsetHeight / 100)) / 2 - 25);
+		var topP = -((y / (Skipli_popupCont.offsetHeight / 100)) / 2);
 		document.querySelector(".carusel-v2__carusel-v2-popup-img").style.left = `${leftP}%`;
 		document.querySelector(".carusel-v2__carusel-v2-popup-img").style.top = `${topP}%`;
 	}

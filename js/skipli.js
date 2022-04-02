@@ -102,12 +102,16 @@
 		Skipli_popupImg.style.maxHeight = Skipli_popupMaximize ? "200%" : "100%";
 	}
 	function onPopupMove(e){
-		if(!Skipli_popupMaximize) return document.querySelector(".carusel-v2__carusel-v2-popup-img").style.backgroundPosition = "center";
+		if(!Skipli_popupMaximize){
+			document.querySelector(".carusel-v2__carusel-v2-popup-img").style.left = "initial";
+			document.querySelector(".carusel-v2__carusel-v2-popup-img").style.top = "initial";
+			return;
+		}
 		var rect = e.target.getBoundingClientRect();
                 var x = e.clientX - rect.left;
-		var leftP = x / (e.target.offsetWidth / 100);
+		var leftP = (x / (e.target.offsetWidth / 100)) / 2 - 25;
                 var y = e.clientY - rect.top;
-		var topP = y / (e.target.offsetHeight / 100);
+		var topP = (y / (e.target.offsetHeight / 100)) / 2 - 25;
 		document.querySelector(".carusel-v2__carusel-v2-popup-img").style.left = `-${leftP}%`;
 		document.querySelector(".carusel-v2__carusel-v2-popup-img").style.top = `-${topP}%`;
 	}

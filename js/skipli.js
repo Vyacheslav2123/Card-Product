@@ -6,6 +6,7 @@
 	const Skipli_= document.querySelector(".carusel-v2__images-list__arrow");
 	const Skipli_popup = document.querySelector(".carusel-v2__carusel-v2-popup");
 	const Skipli_popupImg = document.querySelector(".carusel-v2__carusel-v2-popup-img");
+	const Skipli_popupCont = document.querySelector(".carusel-v2__carusel-v2-popup-cont");
 	
 	let Skipli_popupMaximize = false;
 	let Skipli_maxCurrentPosition = Array.prototype.slice.call(Skipli_imgContainerPopup.childNodes).filter(e => !(e instanceof Text)).length - 1;
@@ -100,6 +101,10 @@
 		Skipli_popupMaximize = !Skipli_popupMaximize;
 		Skipli_popupImg.style.maxWidth = Skipli_popupMaximize ? "200%" : "100%";
 		Skipli_popupImg.style.maxHeight = Skipli_popupMaximize ? "200%" : "100%";
+		if(!Skipli_popupMaximize){
+			document.querySelector(".carusel-v2__carusel-v2-popup-img").style.left = "initial";
+			document.querySelector(".carusel-v2__carusel-v2-popup-img").style.top = "initial";
+		}
 	}
 	function onPopupMove(e){
 		if(!Skipli_popupMaximize){
@@ -107,11 +112,11 @@
 			document.querySelector(".carusel-v2__carusel-v2-popup-img").style.top = "initial";
 			return;
 		}
-		var rect = e.target.getBoundingClientRect();
+		var rect = Skipli_popupCont.getBoundingClientRect();
                 var x = e.clientX - rect.left;
-		var leftP = (x / (e.target.offsetWidth / 100)) / 2 - 25;
+		var leftP = (x / (Skipli_popupCont.offsetWidth / 100)) / 2 - 25;
                 var y = e.clientY - rect.top;
-		var topP = (y / (e.target.offsetHeight / 100)) / 2 - 25;
+		var topP = (y / (Skipli_popupCont.offsetHeight / 100)) / 2 - 25;
 		document.querySelector(".carusel-v2__carusel-v2-popup-img").style.left = `-${leftP}%`;
 		document.querySelector(".carusel-v2__carusel-v2-popup-img").style.top = `-${topP}%`;
 	}

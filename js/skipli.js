@@ -123,7 +123,7 @@
 		    el.style.display = c_display;
 		}
 	}
-
+        document.querySelector(".carusel-v2__carusel-v2-popup-img").addEventListener("mousemove", (e) => onPopupMove(e));
 	document.querySelector(".carusel-v2__carusel-v2-exit").addEventListener("click", () => Skipli_togglePopup(false));
 	document.addEventListener("mouseover", ProductDetailPageBySkipli);
 	document.addEventListener("click", ProductDetailPageBySkipli);
